@@ -12,7 +12,8 @@
 
 ## ****Most Popular Data Structures:****
 
-[1. Array](#array)
+1. [Array](#array)
+2. [Linked List](#linked-list)
 
 ## Array
 
@@ -37,3 +38,44 @@
 | ****Linear Search**** | O(N)       |
 | ****Binary Search**** | O(log n)   |
 | ****Sort****          | O($n^2$)   |
+---
+
+## Linked List
+
+### What is a Linked List?
+
+A ****linked list**** is a linear data structure that consists of a series of nodes connected by pointers. Each node contains ****data**** and a ****reference**** to the next node in the list.
+
+### Linked List vs Array
+
+| Array                               | Linked List                       |
+| ----------------------------------- | --------------------------------- |
+| Stored in contiguous location       | Not stored in contiguous location |
+| Fixed size                          | Dynamic size                      |
+| Memory is allocated at compile time | Memory is allocated at run time   |
+| Use less memory                     | Use more memory                   |
+| Insertion/Deletion: Inefficient     | Insertion/Deletion: Efficient     |
+| Elements can be accessed easily     | Elements can be accessed slowly   |
+
+### Types of Linked List
+
+1. Singly Linked List
+2. Doubly Linked List
+3. Circular Linked List
+4. Doubly Circular Linked List
+
+## Complexity Analysis of Operations on Linked List
+
+### Time Complexity
+
+| Operation                | Worst Case |
+| ------------------------ | ---------- |
+| ****Traversal****        | O(N)       |
+| ****Append****           | O(1)       |
+| ****Insert Front****     | O(1)       |
+| ****Insert****           | O(N)       |
+| ****Reverse****          | O(N)       |
+| ****Delete Beginning**** | O(1)       |
+| ****Delete End****       | O(N)       |
+| ****Deletion Middle****  | O(N)       |
+| ****Linear Search****    | O(N)       |
