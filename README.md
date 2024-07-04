@@ -14,6 +14,7 @@
 
 1. [Array](#array)
 2. [Linked List](#linked-list)
+3. [Stack](#stack)
 
 ## Array
 
@@ -79,3 +80,24 @@ A ****linked list**** is a linear data structure that consists of a series of no
 | ****Delete End****       | O(N)       |
 | ****Deletion Middle****  | O(N)       |
 | ****Linear Search****    | O(N)       |
+---
+
+## Stack
+
+### What is a Stack?
+
+A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle.
+
+## Complexity Analysis of Operations on Stack
+
+### Time Complexity
+
+| Operation       | Worst Case |
+| --------------- | ---------- |
+| ****Push****    | O(1)       |
+| ****Pop****     | O(1)       |
+| ****Peek****    | O(1)       |
+| ****IsEmpty**** | O(1)       |
+| ****length****  | O(1)       |
+| ****clear****   | O(n)       |
+---

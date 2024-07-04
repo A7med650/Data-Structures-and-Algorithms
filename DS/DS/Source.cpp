@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Array.h"
 #include "LinkedList.h"
+#include "Stack.h"
 
 using namespace std;
 
@@ -33,6 +34,23 @@ int main()
 
 	cout << linked.search(121) << endl;
 	cout << linked.search(2) << endl;
+
+	cout << "stack" << endl;
+
+	Stack stack;
+	stack.push(1);
+	stack.push(2);
+	stack.push(3);
+	stack.push(4);
+	cout << stack.peek() << endl; //4 not remove
+	cout << stack.pop() << endl; //4 remove
+	cout << stack.peek() << endl; //3 not remove
+	cout << stack.length() << endl; //3
+	cout << stack.is_empty() << endl; //false
+	stack.clear();
+	stack.pop();
+	cout << stack.is_empty() << endl; //true
+
 
 	return 0;
 }
