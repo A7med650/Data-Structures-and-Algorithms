@@ -2,6 +2,7 @@
 #include "Array.h"
 #include "LinkedList.h"
 #include "Stack.h"
+#include "Queue.h"
 
 using namespace std;
 
@@ -51,6 +52,20 @@ int main()
 	stack.pop();
 	cout << stack.is_empty() << endl; //true
 
+	cout << "Queue" << endl;
+
+	Queue queue;
+	queue.enqueue(1);
+	queue.enqueue(2);
+	queue.enqueue(3);
+	queue.enqueue(4);
+	cout << queue.dequeue() << endl; //1 remove
+	cout << queue.front() << endl; // 2 not remove
+	cout << queue.rear() << endl; //4 not remove
+	cout << queue.is_empty() << endl; //0
+	cout << queue.length() << endl; //3
+	queue.clear();
+	queue.dequeue();
 
 	return 0;
 }

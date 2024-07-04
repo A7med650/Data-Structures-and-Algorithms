@@ -15,6 +15,7 @@
 1. [Array](#array)
 2. [Linked List](#linked-list)
 3. [Stack](#stack)
+4. [Queue](#queue)
 
 ## Array
 
@@ -97,6 +98,27 @@ A stack is a linear data structure that follows the Last-In-First-Out (LIFO) pri
 | ****Push****    | O(1)       |
 | ****Pop****     | O(1)       |
 | ****Peek****    | O(1)       |
+| ****IsEmpty**** | O(1)       |
+| ****length****  | O(1)       |
+| ****clear****   | O(n)       |
+---
+
+## Queue
+
+### What is a Queue?
+
+****Queue Data Structure**** is a linear data structure that is open at both ends and the operations are performed in First In First Out (FIFO) order.
+
+## Complexity Analysis of Operations on Queue
+
+### Time Complexity
+
+| Operation       | Worst Case |
+| --------------- | ---------- |
+| ****Enqueue**** | O(1)       |
+| ****Dequeue**** | O(1)       |
+| ****Rear****    | O(1)       |
+| ****Front****   | O(1)       |
 | ****IsEmpty**** | O(1)       |
 | ****length****  | O(1)       |
 | ****clear****   | O(n)       |
