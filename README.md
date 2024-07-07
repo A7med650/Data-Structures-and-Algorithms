@@ -190,3 +190,63 @@ A ****tree data structure**** is a hierarchical structure that is used to repres
 2. Database Indexing
 3. Data Compression
 4. XML Parsing
+
+---
+
+### What is a Binary Search Tree(BST)?
+
+A Binary Search Tree is a data structure used in computer science for organizing and storing data in a sorted manner. Each node in a Binary Search Tree has at most two children, a left child and a right child, with the left child containing values less than the parent node and the right child containing values greater than the parent node.
+
+### How to handling duplicate values in the Binary Search Tree?
+
+We must follow a consistent process throughout i.e. either store duplicate value at the left or store the duplicate value at the right of the root, but be consistent with your approach.
+
+## Basic Operations on Binary Search Tree
+
+1. Insertion
+    - First step create new Node.
+    - Initialize new pointer equal to root.
+    - if tree is empty make root equal new node.
+    - else check if data in this node less than data in new node move to the right subtree Otherwise, move to the left subtree.
+    - Time Complexity
+      - The worst-case time complexity of insert operations is O(h) where h is the height of the Binary Search Tree.
+      - In the worst case, we may have to travel from the root to the deepest leaf node. The height of a skewed tree may become n and the time complexity of insertion operation may become O(n).
+2. Binary Search Tree (BST) Traversals
+![DFS Traversals](./imgs/depth-first-preorder-inorder-postorder.jpg) ![BST Traversals](./imgs/binary-tree-traversals.jpg)
+   1. Depth First Search or DFS
+      1. Inorder Traversal
+         - Create an empty stack (say S).
+         - Initialize the current node as root.
+         - Push the current node to S and set current = current->left until current is NULL.
+         - If current is NULL and the stack is not empty then
+         - Pop the top item from the stack.
+         - Print the popped item and set current = popped_item->right
+      2. Preorder Traversal
+         - Create an empty stack (say S).
+         - Initialize the current node as root.
+         - Print the data then Push the current node to S and set current = current->left until current is NULL.
+         - If current is NULL and the stack is not empty then
+         - Pop the top item from the stack.
+         - set current = popped_item->right
+      3. Postorder Traversal
+         - Create an two empty stacks (say S,S2).
+         - Initialize the current node as root.
+         - Push the current node to S and set current = current->left until current is NULL.
+         - If current is NULL and the stack S is not empty then
+         - check if S.top()->right NULL or S2 is not empty and S2.top() equal to temp node.
+         - Pop the top item from the stack.
+         - Print the popped item and set current = popped_item->right
+         - else push the S1.top() in stack S2.
+   2. Level Order Traversal or Breadth First Search or BFS
+      - Create an empty Queue Q.
+      - Enqueue the root node of the tree to Q
+      - Loop while Q is not empty
+      - Enqueue the left child of the dequeued node if it exists
+      - Enqueue the right child of the dequeued node if it exists
+      - Dequeue a node from Q and visit it
+
+### Applications of Binary Search Tree (BST)
+
+1. Searching: Finding a specific element in a sorted collection
+2. Sorting: Sorting a collection of elements in ascending or descending order
+3. Artificial intelligence: Decision trees and rule-based systems

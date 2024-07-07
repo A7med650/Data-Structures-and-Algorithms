@@ -3,6 +3,7 @@
 #include "LinkedList.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "BST.h"
 
 using namespace std;
 
@@ -66,6 +67,28 @@ int main()
 	cout << queue.length() << endl; //3
 	queue.clear();
 	queue.dequeue();
+
+	cout << "Binary Search Tree" << endl;
+	BST bst;
+	bst.inasert(22);
+	bst.inasert(12);
+	bst.inasert(30);
+	bst.inasert(8);
+	bst.inasert(20);
+	bst.inasert(25);
+	bst.inasert(40);
+	
+	cout << "In Order: ";
+	bst.inorder();
+
+	cout << "Pre Order: ";
+	bst.preorder();
+
+	cout << "Post Order: ";
+	bst.postorder();
+
+	cout << "Level Order: ";
+	bst.level_order();
 
 	return 0;
 }
