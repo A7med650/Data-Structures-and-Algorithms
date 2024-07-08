@@ -17,5 +17,7 @@ public:
 	void preorder();
 	void postorder();
 	void level_order();
+	bool search(int key);
+	void delete_node(int key);
 };
 

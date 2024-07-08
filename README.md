@@ -244,6 +244,27 @@ We must follow a consistent process throughout i.e. either store duplicate value
       - Enqueue the left child of the dequeued node if it exists
       - Enqueue the right child of the dequeued node if it exists
       - Dequeue a node from Q and visit it
+3. Searching in Binary Search Tree (BST)
+   - We compare the value to be searched with the value of the root.
+   - If it’s equal we are done with the search if it’s smaller we know that we need to go to the left subtree else go to the right subtree.
+4. Deletion in Binary Search Tree (BST)
+   - Delete a Leaf Node in BST
+     - Initialize the current node as root and previous as NULL.
+     - Iterate through the tree until the current data is equal to the key we want to delete.
+     - check if current data less than prev data then set left pointer to NULL else set right pointer to NULL.
+     - delete current node.
+   - Delete a Node with Single Child in BST
+     - same the Case 1
+     - check if child is right or left then current equal the child
+     - set prev data equal current data and remove relation
+     - delete current node.
+   - Delete a Node with Both Children in BST
+     - Initialize boolean varible (say B) to check if child own subtree or not.
+     - Initialize the temp node as current.
+     - current equal to right child.
+     - Iterate through the subtree only left childs.
+     - if child own subtree then prev left child pointer equal to current right else prev right child pointer equal to current right.
+     - delete current node.
 
 ### Applications of Binary Search Tree (BST)
 

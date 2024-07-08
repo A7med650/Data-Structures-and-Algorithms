@@ -135,3 +135,89 @@ void BST::level_order()
 	}
 	cout << endl;
 }
+
+bool BST::search(int key)
+{
+	BinaryTreeNode* current = root;
+	while (current != nullptr)
+	{
+		if (current->get_data() == key)
+			return true;
+		else if (current->get_data() > key)
+			current = current->get_left();
+		else
+			current = current->get_right();
+	}
+	return false;
+}
+
+void BST::delete_node(int key)
+{
+	BinaryTreeNode* prev = nullptr;
+	BinaryTreeNode* current = root;
+	while (current != nullptr)
+	{
+		if (current->get_data() == key)
+		{
+			// Case 1. Delete a Leaf Node in BST
+			if (current->get_left() == nullptr && current->get_right() == nullptr)
+			{
+				if (current->get_data() < prev->get_data())
+					prev->set_left(nullptr);
+				else
+					prev->set_right(nullptr);
+			}
+
+			// Case 2. Delete a Node with Single Child in BST
+			else if (current->get_left() == nullptr || current->get_right() == nullptr)
+			{
+				prev = current;
+				if (current->get_left() != nullptr)
+				{
+					current = current->get_left();
+					prev->set_data(current->get_data());
+					prev->set_left(nullptr);
+				}
+				else
+				{
+					current = current->get_right();
+					prev->set_data(current->get_data());
+					prev->set_right(nullptr);
+				}
+			}
+
+			// Case 3. Delete a Node with Both Children in BST
+			else
+			{
+				bool check = false;
+				BinaryTreeNode* temp = current;
+				prev = current;
+				current = current->get_right();
+				while (current->get_left() != nullptr)
+				{
+					check = true;
+					prev = current;
+					current = current->get_left();
+				}
+				temp->set_data(current->get_data());
+				if (check)
+					prev->set_left(current->get_right());
+				else
+					prev->set_right(current->get_right());
+			}
+
+			delete current;
+			break;
+		}
+		else if (current->get_data() > key)
+		{
+			prev = current;
+			current = current->get_left();
+		}
+		else
+		{
+			prev = current;
+			current = current->get_right();
+		}
+	}
+}

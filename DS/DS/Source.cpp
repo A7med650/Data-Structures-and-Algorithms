@@ -77,6 +77,7 @@ int main()
 	bst.inasert(20);
 	bst.inasert(25);
 	bst.inasert(40);
+	bst.inasert(27);
 	
 	cout << "In Order: ";
 	bst.inorder();
@@ -89,6 +90,13 @@ int main()
 
 	cout << "Level Order: ";
 	bst.level_order();
+
+	cout << "Key = 20 is " << bst.search(20) << endl;
+	cout << "Key = 23 is " << bst.search(23) << endl;
+
+	bst.delete_node(22);
+	cout << "In Order: ";
+	bst.inorder();
 
 	return 0;
 }
